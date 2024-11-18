@@ -1,0 +1,108 @@
+/* Start Global Values */
+:root {
+  --main-color: #F7ECDE;
+  --selection-color: #FEC260;
+  --focus-input-border-color: #d99c39;
+  --focus-input-boxShadow-color: #fec26055;
+  --start-gradient-color: #3ca55c;
+  --end-gradient-color: #b5ac49;
+  --submit-color: #D1512D;
+  --submit-hover-color: #BB4120;
+  --visit-color: #9EB23B;
+  --visit-hover-color: #8A9E23;
+  --delete-color: #EB1D36;
+  --delete-hover-color: #D30820;
+}
+body {
+  background-color: var(--main-color);
+  font-family: 'PT Sans Caption', sans-serif;
+}
+
+body ::selection {
+  background-color: var(--selection-color);
+  color: #000;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 3.125rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-family: 'Righteous', cursive;
+  font-size: 1.5625rem;
+  font-weight: 500;
+}
+/* End Global Values */
+
+/* Start Inputs Section */
+#card .title {
+  width: fit-content;
+  position: relative;
+}
+
+#card .title::after {
+  content: "";
+  width: 100%;
+  height: 30%;
+  background-color: var(--selection-color);
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  transition: 0.3s all;
+  z-index: -1;
+}
+
+#card .title:hover::after {
+  height: calc(70% - 10px);
+}
+
+.form-control:focus {
+  border-color: var(--focus-input-border-color);
+  box-shadow: 0 0 0 0.25rem var(--focus-input-boxShadow-color);
+}
+
+#card .inputs {
+  border-top: 2px dotted #000 ;
+  border-bottom: 2px dotted #000 ;
+}
+
+.inputs h2 {
+  background-image: linear-gradient(to right, var(--start-gradient-color) , var(--end-gradient-color) 70% );
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+/* End Inputs Section */
+
+/*Start All btn in the bookmark site*/
+
+#card .inputs .submit {
+  background-color: var(--submit-color);
+  color: #fff;
+}
+#card .inputs .submit:hover {
+  background-color: var(--submit-hover-color);
+}
+
+#tableBody .visit {
+  background-color: var(--visit-color);
+  color: #fff;
+}
+#tableBody .visit:hover {
+  background-color: var(--visit-hover-color);
+}
+
+#tableBody .del {
+  background-color: var(--delete-color);
+  color: #fff;
+}
+#tableBody .del:hover {
+  background-color: var(--delete-hover-color) ;
+}
+/* End  All btn in the bookmark site*/
+
+
